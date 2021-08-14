@@ -13,9 +13,9 @@ pipeline {
 			}
 		}	
 		
-		stage ('Test') {
+		stage ('Build docker image') {
 			steps {
-				echo 'Test is sucess'
+				sh 'docker build -t shivakumars777/my-app:2.0.0 .'
 			}
 		}	
 	}
