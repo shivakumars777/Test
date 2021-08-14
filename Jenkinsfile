@@ -1,9 +1,9 @@
 pipeline { 
 	agent any
 	stages {
-		stage ('Build') {
+		stage ('Git checkout') {
 			steps {
-				echo 'Buils is sucess'
+				git branch: 'main', credentialsId: 'git', url: 'https://github.com/shivakumars777/War.git'
 			}
 		}	
 				
