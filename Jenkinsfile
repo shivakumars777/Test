@@ -7,9 +7,9 @@ pipeline {
 			}
 		}	
 				
-		stage ('Deploy') {
+		stage ('Maven') {
 			steps {
-				echo 'Deploy is sucess'
+				sh 'mvn clean install'
 			}
 		}	
 		
