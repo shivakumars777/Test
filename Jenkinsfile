@@ -1,10 +1,28 @@
-pipeline{
-	agent any{
-	stages {
-		stage( 'Git checkout') {
-		    git branch: 'main', credentialsId: 'git', url: 'https://github.com/shivakumars777/War.git'
+pipeline {
+	agent any
+	triggers {
+		cron(* * * * *)
+	}
+	Stages { 
+		stage('Build') {
+			steps {
+			      echo 'testing the application'
+			}
 		}
+	
+		stage('Test') {
+			steps {
+			      
+				echo 'testing the application'
+			}
+        }
 		
-	}		
+		stage('Test') {
+			steps {
+			      
+				echo 'testing the application'
+			}
+        }
+	}
 	
 }	
