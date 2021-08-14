@@ -1,28 +1,22 @@
-pipeline {
+pipeline { 
 	agent any
-	triggers {
-		cron(* * * * *)
-	}
-	Stages { 
-		stage('Build') {
+	stages {
+		stage ('Build') {
 			steps {
-			      echo 'testing the application'
+				echo 'Buils is sucess'
 			}
-		}
-	
-		stage('Test') {
+		}	
+				
+		stage ('Deploy') {
 			steps {
-			      
-				echo 'testing the application'
+				echo 'Deploy is sucess'
 			}
-        }
+		}	
 		
-		stage('Test') {
+		stage ('Test') {
 			steps {
-			      
-				echo 'testing the application'
+				echo 'Test is sucess'
 			}
-        }
+		}	
 	}
-	
 }	
